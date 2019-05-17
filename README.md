@@ -1,5 +1,7 @@
 # godaddy-dyndns
 A short script for when you can't afford a Dyn DNS service
+
+**Necessary to instal 'jq'**
 ### Necessary modifications
 Wherever you see a tag (<>) you must change the tag for whatever it syas (domain, keys, ...)
 ### Functionality
