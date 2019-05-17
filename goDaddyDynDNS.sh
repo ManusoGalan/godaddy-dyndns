@@ -10,7 +10,7 @@ storedIP=$(curl -s -X GET "https://api.godaddy.com/v1/domains/$domain/records/A/
 	-H "Authorization: sso-key $key:$secret" | jq '.[].data')
 currentIP=$(curl -s https://ipinfo.io/ip)
 
-if [ "$storedIP" != "$currentIP" ]; then
+if [ "$storedIP" != "\"$currentIP\"" ]; then
 	echo "Updating registry"
 
 	curl -s -XPUT "https://api.godaddy.com/v1/domains/$domain/records/A" \
